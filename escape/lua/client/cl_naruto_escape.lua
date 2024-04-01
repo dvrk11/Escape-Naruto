@@ -13,11 +13,11 @@ surface.CreateFont("TEXT:MENU2",{
     weight = 500
 })
 
-local Storm = Storm or {}
-Storm.Escape = {}
+local Naruto = Naruto or {}
+Naruto.Escape = {}
 
 local frame 
-function Storm.Escape:Show()
+function Naruto.Escape:Show()
     if IsValid(frame) then return end 
 
     frame = vgui.Create("DFrame")
@@ -135,7 +135,7 @@ function Storm.Escape:Show()
     end     
 end     
 
-hook.Add("PreRender", "StormEscape", function()
+hook.Add("PreRender", "NarutoEscape", function()
     local F4Key = KEY_F4
 	if ( gui.IsGameUIVisible() and input.IsKeyDown( KEY_ESCAPE )) then
         if IsValid(frame) then
@@ -143,7 +143,7 @@ hook.Add("PreRender", "StormEscape", function()
             frame:Remove()
         else
             gui.HideGameUI()
-            Storm.Escape:Show()
+            Naruto.Escape:Show()
         end
     end
 end)
